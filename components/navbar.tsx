@@ -112,7 +112,16 @@ export default function Navbar() {
               <div className="py-2">
                 <ThemeToggle />
               </div>
-              <Button className="w-full">Resume</Button>
+              <Button>
+                <a
+                  href="/cv.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download
+                >
+                  Resume
+                </a>
+              </Button>
             </nav>
           </div>
         </div>
