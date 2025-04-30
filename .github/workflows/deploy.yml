@@ -45,11 +45,12 @@ jobs:
       - name: Add .nojekyll file
         run: touch out/.nojekyll
 
-      - name: Deploy to GitHub Pages repo
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Deploy to FTP server
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
         with:
-          token: ${{ secrets.DEPLOY_TOKEN }}
-          folder: out
-          repository-name: mikeunge/mikeunge.github.io
-          branch: main
-          clean: true
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          sftp_only: true
+          local_path: "out/*"
+          remote_path: "/"
