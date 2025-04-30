@@ -8,6 +8,7 @@ import Image from "next/image";
 
 export default function Hero() {
   const [text, setText] = useState("");
+  const [imageSrc, setImageSrc] = useState("/profile.webp");
   const fullText = "Software & DevOps Engineer";
 
   useEffect(() => {
@@ -34,6 +35,12 @@ export default function Hero() {
         behavior: "smooth",
       });
     }
+  };
+
+  const handleImageClick = () => {
+    setImageSrc((prevSrc) =>
+      prevSrc === "/profile.webp" ? "/profile-anime.webp" : "/profile.webp"
+    );
   };
 
   return (
@@ -125,13 +132,23 @@ export default function Hero() {
           <div className="flex justify-center md:block group relative -mb-24 md:mb-0">
             <div className="bg-gradient-to-br from-primary/20 to-primary/5 rounded-full w-48 h-48 md:w-72 md:h-72 flex items-center justify-center relative md:absolute md:right-40 md:-top-40">
               <div className="bg-muted rounded-full overflow-hidden w-40 h-40 md:w-56 md:h-56">
-                <Image
-                  src="/profile.webp"
-                  width={250}
-                  height={250}
-                  alt="mikeunge"
-                  className="w-full h-full object-cover filter grayscale transition duration-500 group-hover:filter-none"
-                />
+                <motion.div
+                  key={imageSrc}
+                  initial={{ opacity: 0, scale: 1.1 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 1.05 }}
+                  transition={{ duration: 0.6 }}
+                  className="w-full h-full"
+                >
+                  <Image
+                    src={imageSrc}
+                    width={250}
+                    height={250}
+                    alt="mikeunge"
+                    className="w-full h-full object-cover filter grayscale transition duration-500 group-hover:filter-none group-hover:cursor-pointer"
+                    onClick={handleImageClick}
+                  />
+                </motion.div>
               </div>
             </div>
           </div>
