@@ -122,7 +122,7 @@ export default function Hero() {
             </div>
           </motion.div>
           {/* Main profile bubble with image */}
-          <div className="flex justify-center md:block group relative mb-0">
+          <div className="flex justify-center md:block group relative -mb-24 md:mb-0">
             <div className="bg-gradient-to-br from-primary/20 to-primary/5 rounded-full w-48 h-48 md:w-72 md:h-72 flex items-center justify-center relative md:absolute md:right-40 md:-top-40">
               <div className="bg-muted rounded-full overflow-hidden w-40 h-40 md:w-56 md:h-56">
                 <Image
