@@ -2,6 +2,4 @@
 
 > This is the "main" repository for my portfolio website.
 
-Because I want to deploy to [mikeunge.github.io](https://github.com/mikeunge/mikeunge.github.io) I need to build static files, this repo holds the _actual_ portfolio code seen on [mikeunge.github.io](https://mikeunge.github.io).
-
-If there are any changes in _main_ a Github workflow will be triggered, building an pushing the static content to [github.com/mikeunge/mikeunge.github.io](https;//github.com/mikeunge/mikeunge.github.io).
+[<img alt="Deployed with FTP Deploy Action" src="https://img.shields.io/badge/Deployed With-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=0077b6">](https://github.com/SamKirkland/FTP-Deploy-Action)
