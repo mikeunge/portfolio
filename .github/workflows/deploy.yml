@@ -55,3 +55,4 @@ jobs:
           server-dir: /
           port: 22
           protocol: ftps
+          timeout: 100000
